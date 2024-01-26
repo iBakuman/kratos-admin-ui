@@ -9,8 +9,11 @@ function onRequestAdmin(client_req, client_res) {
   console.log('serve: ' + client_req.url);
 
   var options = {
-    hostname: '127.0.0.1',
-    port: 4434,
+    hostname: 'ciam-admin.kakuyasu.theplant-dev.com',
+    protocol: 'https:',
+    port: 443,
+    // hostname: '127.0.0.1',
+    // port: 4434,
     path: client_req.url,
     method: client_req.method,
     headers: client_req.headers
@@ -37,8 +40,9 @@ function onRequestPublic(client_req, client_res) {
   console.log('serve: ' + client_req.url);
 
   var options = {
-    hostname: '127.0.0.1',
-    port: 4433,
+    hostname: 'ciam.kakuyasu.theplant-dev.com',
+    protocol: 'https:',
+    port: 443,
     path: client_req.url,
     method: client_req.method,
     headers: client_req.headers
